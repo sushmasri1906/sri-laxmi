@@ -7,7 +7,7 @@ import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-	{ href: "/", name: "Home", icon: <FaHome /> },
+	{ href: "/",  icon: <FaHome /> },
 	{ href: "/about", name: "About Us" },
 	{ href: "/products", name: "Products" },
 	{ href: "/machinery", name: "Our Machinery" },
