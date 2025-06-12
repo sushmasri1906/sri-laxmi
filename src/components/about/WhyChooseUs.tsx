@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
 							whileInView="visible"
 							viewport={{ once: true }}
 							variants={cardVariants}
-							className="group bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-orange-400 hover:shadow-orange-500/40 transition duration-300">
+							className="group bg-orange-400/5 p-6 rounded-xl shadow-md hover:shadow-lg shadow-orange-400/40 border border-orange-400/40 hover:border-orange-500/40 hover:shadow-orange-500/40 transition duration-300">
 							<div className="mb-4 flex justify-center">
 								<div className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-orange-500 transition duration-300">
 									<Icon

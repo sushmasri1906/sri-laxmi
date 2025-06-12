@@ -6,10 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749714943/jaw-crusher_jf8xqi.jpg",
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749714725/cone_crusher_hwhfqk.jpg",
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749714725/cone_crusher_hwhfqk.jpg",
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749712230/Gemini_Generated_Image_nan52pnan52pnan5_joqnwf.png",
+	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749719773/vecteezy_landscape-of-mining-truck-and-heavy-equipment-activity_46252113_hlqfmh.jpg",
+	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749720967/conveyors_ayt4pq.webp",
+	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749720605/cone-crushers_a2hzfk.webp",
 ];
 
 const Carousel = () => {
@@ -37,7 +36,6 @@ const Carousel = () => {
 							width={1920}
 							className="h-screen w-screen object-cover rounded-md shadow-md"
 							priority={index === 0}
-							style={{ filter: "grayscale(0.7)" }}
 						/>
 					</div>
 				))}
