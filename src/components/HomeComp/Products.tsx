@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const solutions = [
+const products = [
 	{
 		title: "Waterwell & Supplies",
 		image:
@@ -34,7 +34,7 @@ const solutions = [
 	},
 ];
 
-const Solution = () => {
+const Products = () => {
 	return (
 		<section className="py-16 px-4 sm:px-8 lg:px-20">
 			<motion.h2
@@ -42,12 +42,12 @@ const Solution = () => {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
 				className="text-3xl sm:text-4xl font-bold text-center  mb-12 relative">
-				OUR SOLUTIONS
+				OUR Products
 				<div className="h-1 w-24 bg-orange-500 mx-auto mt-2" />
 			</motion.h2>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-				{solutions.map((item, index) => (
+				{products.map((item, index) => (
 					<motion.div
 						key={index}
 						initial={{ opacity: 0, y: 40 }}
@@ -77,4 +77,4 @@ const Solution = () => {
 	);
 };
 
-export default Solution;
+export default Products;

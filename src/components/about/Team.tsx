@@ -30,7 +30,7 @@ const itemVariants = {
 
 const Team = () => {
 	return (
-		<section className="bg-black text-gray-200 px-6 sm:px-12 lg:px-24 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+		<section className="bg-black text-gray-200 px-6 sm:px-12 lg:px-24 py-12 sm:py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 			<motion.div
 				initial="hidden"
 				whileInView="show"

@@ -5,16 +5,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const links = [
-	{ href: "/",  icon: <FaHome /> },
+	{ href: "/", icon: <FaHome className=" text-lg" /> },
 	{ href: "/about", name: "About Us" },
 	{ href: "/products", name: "Products" },
 	{ href: "/machinery", name: "Our Machinery" },
 	{ href: "/gallery", name: "Gallery" },
 	{ href: "/contact", name: "Contact" },
 ];
-
 
 const NavBar = () => {
 	const pathname = usePathname();
@@ -32,32 +32,39 @@ const NavBar = () => {
 
 	return (
 		<nav
-			className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-				scrolled ? "bg-white shadow-md border-b border-gray-200" : "bg-white"
+			className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 h-24 flex items-center justify-between  ${
+				scrolled && !menuOpen
+					? "  backdrop-blur-lg shadow-md"
+					: " bg-transparent"
 			}`}>
-			<div className="max-w-7xl mx-auto px-4 lg:px-16 h-16 flex items-center justify-between text-gray-800">
+			<div className="px-4 lg:px-16 w-full flex items-center justify-between">
 				<h1 className="text-xl lg:text-2xl font-bold tracking-wide text-orange-500">
-					Sri Laxmi
+					<Image
+						src="https://res.cloudinary.com/degrggosz/image/upload/v1749712620/29_zxpmin.png"
+						height={64}
+						width={300}
+						alt="logo"
+						className="w-[240px] sm:w-[300px]"
+					/>
 				</h1>
 
 				{/* Desktop Menu */}
-				<div className="hidden lg:flex items-center gap-x-6 text-sm font-medium">
+				<div className="hidden lg:flex items-center gap-x-6 font-medium">
 					{links.map((link) => (
-						<div
+						<motion.div
 							key={link.href}
 							onMouseEnter={() => setHovered(link.href)}
 							onMouseLeave={() => setHovered(null)}
-							className="relative px-2 py-1 flex items-center gap-1">
+							whileHover={{ color: "#ff8904" }}
+							className="relative px-2 py-1  min-w-16 flex justify-center items-center">
 							<Link
 								href={link.href}
-								className={`flex items-center gap-2 transition duration-300 ${
-									selected === link.href
-										? "text-orange-500"
-										: "hover:text-orange-400"
+								className={`transition duration-300 ${
+									selected === link.href ? "text-orange-500" : ""
 								}`}>
-								{link.icon && <span className="text-base">{link.icon}</span>}
-								{link.name}
+								{link.icon ? link.icon : link.name}
 							</Link>
+							{/* Animated underline */}
 							<AnimatePresence>
 								{(hovered === link.href || selected === link.href) && (
 									<motion.div
@@ -67,14 +74,14 @@ const NavBar = () => {
 									/>
 								)}
 							</AnimatePresence>
-						</div>
+						</motion.div>
 					))}
 				</div>
 
 				{/* Mobile Menu Toggle */}
 				<button
 					onClick={() => setMenuOpen(true)}
-					className="lg:hidden text-gray-700"
+					className="lg:hidden"
 					aria-label="Open Menu">
 					<FaBars size={22} />
 				</button>
@@ -86,7 +93,7 @@ const NavBar = () => {
 					<>
 						{/* Overlay - tap to close */}
 						<motion.div
-							className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+							className="fixed top-0 right-0 h-fit z-40 lg:hidden"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							exit={{ opacity: 0 }}
@@ -96,7 +103,7 @@ const NavBar = () => {
 
 						{/* Slide-in Menu Panel */}
 						<motion.div
-							className="fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white text-gray-800 flex flex-col px-6 pt-24 space-y-6 z-50 shadow-xl"
+							className="fixed top-0 right-0 h-full w-4/5 max-w-xs bg-black flex flex-col px-6 pt-24 space-y-6 z-50 shadow-xl"
 							initial={{ x: "100%" }}
 							animate={{ x: 0 }}
 							exit={{ x: "100%" }}

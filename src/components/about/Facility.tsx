@@ -11,7 +11,7 @@ const facilityImages = [
 
 const Facility = () => {
 	return (
-		<section className="bg-black px-6 sm:px-12 lg:px-24 py-20 text-center">
+		<section className="bg-black px-6 sm:px-12 lg:px-24 py-12 sm:py-16 lg:py-20 text-center">
 			<h2 className="text-3xl font-bold text-orange-400 mb-4">
 				Facility & Infrastructure
 			</h2>
