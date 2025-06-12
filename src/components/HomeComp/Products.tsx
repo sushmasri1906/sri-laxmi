@@ -5,32 +5,32 @@ import { motion } from "framer-motion";
 
 const products = [
 	{
-		title: "Waterwell & Supplies",
+		title: "CONE CRUSHERS",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650464/product-31_sdcztw.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729230/th_qpyonz.jpg",
 		description:
-			"Offering comprehensive drilling solutions for water wells, supported by reliable equipment, accessories, and after-sales service across varied terrains.",
+			"Efficient crushing equipment ideal for secondary and tertiary crushing of hard materials.",
 	},
 	{
-		title: "Geological Explorations",
+		title: "JAW CRUSHERS",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650474/2_pxzgtg.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729320/th_1_vspzad.jpg",
 		description:
-			"Unlock subsurface potential with cutting-edge geological exploration rigs and technology designed for precision, efficiency, and productivity.",
+			"Powerful primary crushers built for breaking down large rocks with ease and precision.",
 	},
 	{
-		title: "Infrastructure & Energy",
+		title: "SCREEN'S WIRE MESH",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650490/3_h5rgmu.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749730742/woven-mining-screen-1_ehbaqs.jpg",
 		description:
-			"Supporting infrastructure development with drilling solutions for roadways, railways, hydropower, and energy projects that demand durability and performance.",
+			"Durable and efficient wire mesh screens designed for optimal performance in mineral processing and mining applications.",
 	},
 	{
-		title: "Minerals & Metal Mining",
+		title: "VSI CRUSHERS",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650495/4_es1yry.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749731196/th_n3jlvm.jpg",
 		description:
-			"Robust and reliable equipment designed for the mineral and metal exploration industry, ensuring high performance in challenging conditions.",
+			"High-speed impact crushers designed for producing fine, cubical aggregates in construction and mining.",
 	},
 ];
 
@@ -42,7 +42,7 @@ const Products = () => {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
 				className="text-3xl sm:text-4xl font-bold text-center  mb-12 relative">
-				OUR Products
+				Our Products
 				<div className="h-1 w-24 bg-orange-500 mx-auto mt-2" />
 			</motion.h2>
 
