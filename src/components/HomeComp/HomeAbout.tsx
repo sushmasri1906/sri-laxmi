@@ -13,7 +13,7 @@ const HomeAbout = () => {
 						Welcome to Sri Laxmi Sales Corporation
 					</p>
 					<h2 className="text-xl md:text-5xl font-bold text-white mb-6 leading-tight">
-						Innovative Conveyor Spares for Industrial Performance
+						Conveyor Spares for Industrial Performance
 					</h2>
 					<p className="text-lg text-gray-300 mb-10 leading-relaxed">
 						We specialize in high-performance conveyor spares that enhance
@@ -71,13 +71,13 @@ const HomeAbout = () => {
 				</div>
 
 				{/* Right Image */}
-				<div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl">
+				<div className="relative w-full h-[400px] md:h-[500px] overflow-hidden shadow-xl">
 					<Image
-						src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1749715100/fac2_vswe7z.jpg"
+						src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1749731666/conveyor_belt_system_for_packaging_wgbs8n.png"
 						alt="Conveyor Spares"
 						layout="fill"
 						objectFit="cover"
-						className="rounded-lg"
+						className=""
 					/>
 
 					{/* Floating CTA */}
