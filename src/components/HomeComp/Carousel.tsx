@@ -6,19 +6,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-	"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208237/tmbwi6sdvj0cjmmx0zdp.webp",
-	"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208312/hero-banner4_sgd6jh.webp",
-	"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208340/hero-banner5_psajws.webp",
-	"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208370/hero-banner1_mid5af.webp",
-	"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208397/hero-banner2_sz8n6j.webp",
-	"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208435/hero-banner3_oqmdfk.webp",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749714943/jaw-crusher_jf8xqi.jpg",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749714725/cone_crusher_hwhfqk.jpg",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749714725/cone_crusher_hwhfqk.jpg",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749712230/Gemini_Generated_Image_nan52pnan52pnan5_joqnwf.png",
 ];
 
 const Carousel = () => {
 	const settings = {
 		dots: true,
 		infinite: true,
-		speed: 1000,
+		speed: 3000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
@@ -28,18 +26,18 @@ const Carousel = () => {
 	};
 
 	return (
-		<div className="w-full">
+		<div className="w-screen h-screen">
 			<Slider {...settings}>
 				{images.map((src, index) => (
-					<div
-						key={index}
-						className="relative w-full h-[300px] sm:h-[600px] md:h-[500px] lg:h-[600px] xl:h-[600px]">
+					<div key={index} className="relative">
 						<Image
 							src={src}
 							alt={`Slide ${index + 1}`}
-							fill
-							className="object-cover rounded-md shadow-md"
+							height={1080}
+							width={1920}
+							className="h-screen w-screen object-cover rounded-md shadow-md"
 							priority={index === 0}
+							style={{ filter: "grayscale(0.7)" }}
 						/>
 					</div>
 				))}

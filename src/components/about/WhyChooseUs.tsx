@@ -38,7 +38,7 @@ const cardVariants = {
 
 const WhyChooseUs = () => {
 	return (
-		<section className="px-6 sm:px-12 lg:px-24 py-20 bg-black text-center">
+		<section className="px-6 sm:px-12 lg:px-24 py-12 sm:py-16 lg:py-20 bg-black text-center">
 			<h2 className="text-3xl font-bold text-orange-400 mb-10">
 				Why Choose Us?
 			</h2>
