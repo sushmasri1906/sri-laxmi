@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const images = [
 	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749719773/vecteezy_landscape-of-mining-truck-and-heavy-equipment-activity_46252113_hlqfmh.jpg",
@@ -25,22 +27,43 @@ const Carousel = () => {
 	};
 
 	return (
-		<div className="w-screen h-screen">
+		<div className="w-screen h-[calc(100vh/2)] lg:h-screen relative">
 			<Slider {...settings}>
 				{images.map((src, index) => (
-					<div key={index} className="relative">
+					<div key={index} className="relative  h-[calc(100vh/2)] lg:h-full">
 						<Image
 							src={src}
 							alt={`Slide ${index + 1}`}
 							height={1080}
 							width={1920}
-							className="h-screen w-screen object-cover rounded-md shadow-md"
+							className=" h-full lg:h-screen w-screen object-cover rounded-md shadow-md"
 							priority={index === 0}
 						/>
 					</div>
 				))}
 			</Slider>
 
+			<motion.div
+				initial={{ opacity: 0, y: 50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1, ease: "easeOut" }}
+				viewport={{ once: true }}
+				className="absolute top-1/2 left-0 md:left-12 lg:left-24 ml-6 sm:ml-12 p-4 sm:p-8 max-w-xl w-full">
+				<h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-2">
+					SRI LAXMI <span className="text-white">SALES CORPORATION</span>
+				</h1>
+
+				<p className="font-medium text-sm sm:text-base md:text-lg text-white mb-4 max-w-md">
+					Leading provider of premium mining & drilling equipment with global
+					support.
+				</p>
+
+				<Link
+					href="/about"
+					className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm sm:text-base px-5 py-2 rounded-md shadow-md transition duration-300">
+					Read More
+				</Link>
+			</motion.div>
 			<style jsx global>{`
 				.slick-dots li button:before {
 					color: orange !important;
