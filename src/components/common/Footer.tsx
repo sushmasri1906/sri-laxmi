@@ -10,11 +10,11 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<footer className="bg-black text-white px-6 py-12 lg:px-20">
-			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+		<footer className="px-6 py-12 lg:px-20 text-center">
+			<div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 				{/* Company Info */}
-				<div>
-					<h2 className="text-xl font-semibold text-orange-500 mb-4">
+				<div className="justify-self-center w-60">
+					<h2 className="text-center text-xl font-semibold text-orange-500 mb-4">
 						Sri Laxmi
 					</h2>
 					<p className="text-sm text-gray-400">
@@ -24,7 +24,7 @@ const Footer = () => {
 				</div>
 
 				{/* Quick Links */}
-				<div>
+				<div className="justify-self-center">
 					<h3 className="text-lg font-medium mb-4 text-orange-500">
 						Quick Links
 					</h3>
@@ -58,8 +58,10 @@ const Footer = () => {
 				</div>
 
 				{/* Contact Info */}
-				<div>
-					<h3 className="text-lg font-medium mb-4 text-orange-500">Contact</h3>
+				<div className="justify-self-center w-60">
+					<h3 className="text-lg text-center font-medium mb-4 text-orange-500">
+						Contact
+					</h3>
 					<ul className="text-sm space-y-3 text-gray-300">
 						<li className="flex items-start gap-2">
 							<FaMapMarkerAlt className="text-orange-500 mt-1" />
@@ -88,7 +90,7 @@ const Footer = () => {
 				</div>
 
 				{/* Social Media */}
-				<div>
+				<div className="justify-self-center">
 					<h3 className="text-lg font-medium mb-4 text-orange-500">
 						Follow Us
 					</h3>
