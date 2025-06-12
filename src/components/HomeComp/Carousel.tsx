@@ -36,7 +36,7 @@ const Carousel = () => {
 							alt={`Slide ${index + 1}`}
 							height={1080}
 							width={1920}
-							className=" h-full lg:h-screen w-screen object-cover rounded-md shadow-md"
+							className=" h-full lg:h-screen w-screen object-cover rounded-md shadow-md invert-20"
 							priority={index === 0}
 						/>
 					</div>
@@ -48,14 +48,15 @@ const Carousel = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 1, ease: "easeOut" }}
 				viewport={{ once: true }}
-				className="absolute top-1/2 left-0 md:left-12 lg:left-24 ml-6 sm:ml-12 p-4 sm:p-8 max-w-xl w-full">
+				className="absolute top-1/3 lg:top-2/5 left-0 md:left-12 lg:left-24 ml-6 sm:ml-12 p-4 sm:p-8 max-w-xl w-full">
 				<h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-2">
 					SRI LAXMI <span className="text-white">SALES CORPORATION</span>
 				</h1>
 
 				<p className="font-medium text-sm sm:text-base md:text-lg text-white mb-4 max-w-md">
-					Leading provider of premium mining & drilling equipment with global
-					support.
+					We, Sri Laxmi Sales Corporation traders and manufacturers, Heavy
+					Machining and Fabricators for more than 100 above product variants and
+					supplies them to more than 150 customers.
 				</p>
 
 				<Link
