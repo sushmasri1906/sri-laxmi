@@ -39,7 +39,7 @@ const OurPartners = () => {
 	};
 
 	return (
-		<section className="py-16 border-b-2  border-orange-500/40">
+		<section className="py-16 border-b-2  border-orange-500/40 w-full overflow-hidden">
 			<motion.h2
 				initial={{ opacity: 0, y: -20 }}
 				animate={{ opacity: 1, y: 0 }}

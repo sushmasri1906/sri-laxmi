@@ -27,7 +27,7 @@ const Carousel = () => {
 	};
 
 	return (
-		<div className="w-screen h-[calc(100vh/2)] lg:h-screen relative">
+		<div className="w-screen h-[calc(100vh/2)] lg:h-screen relative overflow-hidden">
 			<Slider {...settings}>
 				{images.map((src, index) => (
 					<div key={index} className="relative  h-[calc(100vh/2)] lg:h-full">
