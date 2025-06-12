@@ -5,32 +5,35 @@ import { motion } from "framer-motion";
 
 const solutions = [
 	{
-		title: "Waterwell & Supplies",
+		title: "VERTICAL LATHE MACHINE",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650464/product-31_sdcztw.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729846/vertical-turning-lathe-machine-1000x1000_bsyjet.jpg",
 		description:
-			"Offering comprehensive drilling solutions for water wells, supported by reliable equipment, accessories, and after-sales service across varied terrains.",
+			"High-performance vertical lathe machine engineered for precise turning of heavy, large-diameter workpieces. Ideal for industries requiring accuracy in vertical machining of metals and alloys.",
 	},
 	{
-		title: "Geological Explorations",
+		title: "LATHE MACHINE",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650474/2_pxzgtg.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729922/precision_qgvgsr.jpg",
 		description:
-			"Unlock subsurface potential with cutting-edge geological exploration rigs and technology designed for precision, efficiency, and productivity.",
+			"Versatile and precision-focused lathe machine designed for shaping, cutting, and drilling materials with efficiency. Suitable for metalworking shops, tool rooms, and industrial manufacturing.",
 	},
 	{
-		title: "Infrastructure & Energy",
+		title: "POWER LOOMING MACHINE",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650490/3_h5rgmu.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729989/semi-automatic-power-looms-machine-770_bhd722.jpg",
 		description:
-			"Supporting infrastructure development with drilling solutions for roadways, railways, hydropower, and energy projects that demand durability and performance.",
+"Efficient and semi-automatic power loom crafted for high-speed textile weaving. Perfect for producing consistent fabric quality across a range of materials in medium to large-scale textile units."
+
+
 	},
 	{
-		title: "Minerals & Metal Mining",
+		title: "ARC WELDING MACHINE",
 		image:
-			"https://res.cloudinary.com/djthwunnh/image/upload/v1749650495/4_es1yry.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749730052/61PIAB7d-JL._SL1350__auht3j.jpg",
 		description:
-			"Robust and reliable equipment designed for the mineral and metal exploration industry, ensuring high performance in challenging conditions.",
+"Durable and powerful arc welding machine designed for seamless welding of metals. Ensures strong joints and smooth operation, making it ideal for construction, fabrication, and repair work."
+
 	},
 ];
 
@@ -42,7 +45,7 @@ const Solution = () => {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
 				className="text-3xl sm:text-4xl font-bold text-center  mb-12 relative">
-				OUR SOLUTIONS
+				Our Machinery
 				<div className="h-1 w-24 bg-orange-500 mx-auto mt-2" />
 			</motion.h2>
 
