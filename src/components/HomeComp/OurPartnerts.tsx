@@ -39,13 +39,13 @@ const OurPartners = () => {
 	};
 
 	return (
-		<section className="py-8 border-b-2 border-orange-500/40">
+		<section className="py-16 border-b-2  border-orange-500/40 w-full overflow-hidden">
 			<motion.h2
 				initial={{ opacity: 0, y: -20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
 				className="text-3xl sm:text-4xl font-bold text-center  mb-12 relative">
-				OUR PARTNERS
+				Our Partners
 				<div className="h-1 w-24 bg-orange-500 mx-auto mt-2" />
 			</motion.h2>
 			<Slider {...settings}>
