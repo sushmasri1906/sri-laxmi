@@ -8,9 +8,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const images = [
-	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749719773/vecteezy_landscape-of-mining-truck-and-heavy-equipment-activity_46252113_hlqfmh.jpg",
-	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749720967/conveyors_ayt4pq.webp",
-	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749720605/cone-crushers_a2hzfk.webp",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749805504/5_dxzxxt.png",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749805480/2_ekm1vv.png",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749805474/1_t7xmfx.png",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749805495/4_sfh3lc.png",
+	"https://res.cloudinary.com/degrggosz/image/upload/v1749805487/3_kptbzu.png",
 ];
 
 const Carousel = () => {
@@ -36,7 +38,7 @@ const Carousel = () => {
 							alt={`Slide ${index + 1}`}
 							height={1080}
 							width={1920}
-							className=" h-full lg:h-screen w-screen object-cover rounded-md shadow-md invert-20"
+							className=" h-full lg:h-screen w-screen object-cover rounded-md shadow-md invert-10"
 							priority={index === 0}
 						/>
 					</div>
