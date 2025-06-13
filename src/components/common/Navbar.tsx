@@ -39,13 +39,15 @@ const NavBar = () => {
 			}`}>
 			<div className="px-4 lg:px-16 w-full flex items-center justify-between">
 				<h1 className="text-xl lg:text-2xl font-bold tracking-wide text-orange-500">
-					<Image
-						src="https://res.cloudinary.com/degrggosz/image/upload/v1749712620/29_zxpmin.png"
-						height={64}
-						width={300}
-						alt="logo"
-						className="w-[240px] sm:w-[300px]"
-					/>
+					<Link href="/" passHref>
+						<Image
+							src="https://res.cloudinary.com/degrggosz/image/upload/v1749712620/29_zxpmin.png"
+							height={64}
+							width={300}
+							alt="logo"
+							className="w-[240px] sm:w-[300px] cursor-pointer"
+						/>
+					</Link>
 				</h1>
 
 				{/* Desktop Menu */}
