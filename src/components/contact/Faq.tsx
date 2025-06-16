@@ -24,7 +24,7 @@ export default function Faq() {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
-		<section className="bg-[#0f0f0f] text-white px-6 py-16">
+		<section className="bg-[#0f0f0f] text-white px-6 py-10">
 			<div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 				{/* Left Content */}
 				<div>

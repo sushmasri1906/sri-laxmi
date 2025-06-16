@@ -2,7 +2,7 @@ import { FiMapPin, FiPhone, FiMail, FiGlobe } from "react-icons/fi";
 
 export default function ContactSection() {
 	return (
-		<section className="bg-[#0f0f0f] text-white px-6 py-24 mt-26">
+		<section className="bg-[#0f0f0f] text-white px-6 pt-46">
 			<div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
 				{/* Left Content */}
 				<div className="max-w-md mx-auto">
