@@ -4,9 +4,14 @@ import Image from "next/image";
 import React from "react";
 
 const facilityImages = [
-	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749715086/fac3.png_q36tl4.png",
-	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749715100/fac2_vswe7z.jpg",
-	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749715110/fac1_jppxxt.jpg",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450831/53_atieqt.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450836/57_yd0qan.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450833/55_qy41an.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450831/51_ulgzhg.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450825/45_tuqyrj.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450805/15_ng6lcg.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450770/15_g9hm43.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450717/3_xfpwdc.png",
 ];
 
 const Facility = () => {

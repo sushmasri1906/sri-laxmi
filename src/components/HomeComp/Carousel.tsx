@@ -8,11 +8,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const images = [
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749805504/5_dxzxxt.png",
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749805480/2_ekm1vv.png",
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749805474/1_t7xmfx.png",
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749805495/4_sfh3lc.png",
-	"https://res.cloudinary.com/degrggosz/image/upload/v1749805487/3_kptbzu.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450747/7_e5b8mb.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450750/8_qtljij.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450753/9_tmu3xn.png",
 ];
 
 const Carousel = () => {

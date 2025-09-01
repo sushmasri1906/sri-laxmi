@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useId } from "react";
+import { FiChevronDown, FiHelpCircle } from "react-icons/fi";
 
 const faqs = [
 	{
@@ -21,57 +22,137 @@ const faqs = [
 ];
 
 export default function Faq() {
-	const [activeIndex, setActiveIndex] = useState(0);
+	const [activeIndex, setActiveIndex] = useState<number | null>(0);
+	const sectionId = useId();
+
+	const toggle = (i: number) => {
+		setActiveIndex((prev) => (prev === i ? null : i));
+	};
 
 	return (
-		<section className="bg-[#0f0f0f] text-white px-6 py-10">
-			<div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-				{/* Left Content */}
-				<div>
-					<div className="overflow-hidden mb-6 rounded-lg">
-						<Image
-							src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739210128/contact-us-img_xfcru4.webp"
-							alt="Support Sri Laxmi"
-							width={600}
-							height={600}
-							className="w-full h-auto object-cover"
-						/>
-					</div>
-					<h3 className="text-2xl font-bold">Still Have Questions?</h3>
-					<p className="text-gray-300 mt-2">
-						We&apos;re here to help with machinery spares, logistics, or any
-						product-related queries.
-					</p>
-					<button className="mt-4 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold">
-						Contact Support
-					</button>
-				</div>
+		<section
+			className="relative bg-[#0b0b0b] text-white"
+			aria-labelledby={`${sectionId}-title`}>
+			{/* subtle depth */}
+			<div
+				aria-hidden
+				className="pointer-events-none absolute inset-0"
+				style={{
+					background:
+						"radial-gradient(900px 420px at 50% -10%, rgba(255,125,40,0.16), transparent), radial-gradient(700px 320px at 0% 100%, rgba(255,125,40,0.10), transparent)",
+				}}
+			/>
 
-				{/* FAQ Section */}
-				<div>
-					<h2 className="text-4xl font-bold leading-tight mb-4">
-						FAQs – Sri Laxmi Sales Corporation
-					</h2>
-					<p className="text-gray-300 mb-6">
-						Explore common queries about our offerings, support, and operations.
-						We&apos;re committed to serving your industrial needs efficiently.
-					</p>
-					<div className="space-y-4">
-						{faqs.map((faq, i) => (
-							<div
-								key={i}
-								onClick={() => setActiveIndex(i)}
-								className={`p-5 rounded-xl cursor-pointer transition ${
-									activeIndex === i
-										? "bg-orange-600 text-white"
-										: "bg-[#1a1a1a] text-gray-200 hover:bg-[#2a2a2a]"
-								}`}>
-								<h4 className="font-semibold text-lg">{faq.question}</h4>
-								{activeIndex === i && (
-									<p className="text-sm mt-2 text-white">{faq.answer}</p>
-								)}
-							</div>
-						))}
+			<div className="relative mx-auto max-w-6xl px-6 py-16">
+				<div className="grid items-center gap-12 md:grid-cols-2">
+					{/* Left: Visual + CTA */}
+					<div>
+						<div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]">
+							<Image
+								src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739210128/contact-us-img_xfcru4.webp"
+								alt="Support team at Sri Laxmi"
+								width={1200}
+								height={900}
+								className="h-auto w-full object-cover"
+								priority
+							/>
+						</div>
+
+						<h3 className="mt-6 text-2xl font-bold tracking-tight">
+							Still have questions?
+						</h3>
+						<p className="mt-2 text-sm text-zinc-300">
+							We&apos;re here to help with machinery spares, logistics, or any
+							product-related queries.
+						</p>
+
+						<div className="mt-5 flex flex-wrap gap-3">
+							<a
+								href="mailto:support@srilaxmisales.com"
+								className="rounded-xl bg-orange-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500">
+								Contact Support
+							</a>
+						</div>
+					</div>
+
+					{/* Right: FAQ */}
+					<div>
+						<div className="mb-2 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-400">
+							<FiHelpCircle className="opacity-80" />
+							FAQs
+						</div>
+
+						<h2
+							id={`${sectionId}-title`}
+							className="text-3xl md:text-4xl font-extrabold tracking-tight">
+							FAQs – Sri Laxmi Sales Corporation
+						</h2>
+						<p className="mt-3 text-sm md:text-base text-zinc-300">
+							Explore common queries about our offerings, support, and
+							operations. We’re committed to serving your industrial needs
+							efficiently.
+						</p>
+
+						<ul className="mt-8 space-y-3">
+							{faqs.map((faq, i) => {
+								const open = activeIndex === i;
+								const itemId = `${sectionId}-item-${i}`;
+								return (
+									<li
+										key={faq.question}
+										className="rounded-2xl border border-white/10 bg-white/5 shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset]">
+										{/* Button-like header (accessible) */}
+										<button
+											aria-controls={`${itemId}-panel`}
+											aria-expanded={open}
+											onClick={() => toggle(i)}
+											className="flex w-full items-center justify-between gap-4 rounded-2xl px-5 py-4 text-left transition hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500">
+											<span
+												className={`text-base font-semibold ${
+													open ? "text-white" : "text-zinc-100"
+												}`}>
+												{faq.question}
+											</span>
+											<FiChevronDown
+												className={`shrink-0 text-orange-400 transition-transform duration-300 ${
+													open ? "rotate-180" : "rotate-0"
+												}`}
+												size={20}
+												aria-hidden
+											/>
+										</button>
+
+										{/* Collapsible panel with smooth animation */}
+										<div
+											id={`${itemId}-panel`}
+											role="region"
+											aria-labelledby={itemId}
+											className={`grid overflow-hidden transition-all duration-300 ease-out ${
+												open
+													? "grid-rows-[1fr] opacity-100"
+													: "grid-rows-[0fr] opacity-0"
+											}`}>
+											<div className="min-h-0 px-5 pb-4">
+												<p className="text-sm leading-relaxed text-zinc-300">
+													{faq.answer}
+												</p>
+											</div>
+										</div>
+									</li>
+								);
+							})}
+						</ul>
+
+						{/* small note */}
+						<p className="mt-6 text-xs text-zinc-400">
+							Can’t find what you’re looking for?{" "}
+							<a
+								href="/contact"
+								className="font-medium text-orange-400 underline-offset-4 hover:underline">
+								Reach our team
+							</a>
+							.
+						</p>
 					</div>
 				</div>
 			</div>
