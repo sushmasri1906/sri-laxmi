@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
 	FiMapPin,
 	FiPhone,
-	FiGlobe,
+	FiMail,
 	FiCopy,
 	FiCheck,
 	FiExternalLink,
@@ -31,20 +31,31 @@ const btnGhost =
 	"inline-flex items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-sm font-semibold text-zinc-200 transition hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500";
 
 export default function ContactSection() {
-	const address = "Plot No. 45, Industrial Area, Hyderabad, Telangana 500072";
-	const phone = "+91 98765 43210";
-	const website = "www.srilaxmisales.com";
+	// Provided details
+	const address = `#2-3-85, Nallagutta, M.G. Road,
+Behind Punjab National Bank,
+Beside ALS Transport,
+Secunderabad - 500003`;
+
+	const phoneMobile = "9966236709";
+	const phoneLandline = "040-66381090";
+	const email = "srilaxmisalescorporation@gmail.com";
 
 	const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-		address
+		"#2-3-85, Nallagutta, M.G. Road, Behind Punjab National Bank, Beside ALS Transport, Secunderabad - 500003"
 	)}`;
-	const telHref = `tel:${phone.replace(/\s+/g, "")}`;
-	const webHref = `https://${website.replace(/^https?:\/\//, "")}`;
+	const telMobileHref = `tel:${phoneMobile.replace(/\s+/g, "")}`;
+	const telLandlineHref = `tel:${phoneLandline.replace(/\s+/g, "")}`;
+	const mailHref = `mailto:${email}`;
 
-	const [copied, setCopied] = useState<"address" | "phone" | "website" | null>(
-		null
-	);
-	const copy = async (key: "address" | "phone" | "website", text: string) => {
+	const [copied, setCopied] = useState<
+		"address" | "phoneMobile" | "phoneLandline" | "email" | null
+	>(null);
+
+	const copy = async (
+		key: "address" | "phoneMobile" | "phoneLandline" | "email",
+		text: string
+	) => {
 		try {
 			await navigator.clipboard.writeText(text);
 			setCopied(key);
@@ -82,7 +93,7 @@ export default function ContactSection() {
 
 			<div className="relative mx-auto max-w-6xl px-6 py-24">
 				<div className="text-center">
-					<span className="inline-block rounded-full border mt-10 border-orange-500/40 bg-orange-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-400">
+					<span className="mt-10 inline-block rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-400">
 						Contact
 					</span>
 					<h2 className="mt-5 text-4xl font-extrabold tracking-tight md:text-5xl">
@@ -100,10 +111,9 @@ export default function ContactSection() {
 						icon={<FiMapPin className="text-orange-400" size={28} />}
 						title="Address"
 						body={
-							<>
-								Plot No. 45, Industrial Area
-								<br /> Hyderabad, Telangana 500072
-							</>
+							<address className="not-italic whitespace-pre-line">
+								{address}
+							</address>
 						}
 						actions={
 							<>
@@ -129,43 +139,63 @@ export default function ContactSection() {
 					<Card
 						icon={<FiPhone className="text-orange-400" size={28} />}
 						title="Phone"
-						body={<span>{phone}</span>}
+						body={
+							<div className="space-y-1">
+								<div>
+									<span className="text-zinc-400">Mobile: </span>
+									<span className="font-medium text-white">{phoneMobile}</span>
+								</div>
+								<div>
+									<span className="text-zinc-400">Landline: </span>
+									<span className="font-medium text-white">
+										{phoneLandline}
+									</span>
+								</div>
+							</div>
+						}
 						actions={
 							<>
-								<a href={telHref} className={btnPrimary}>
-									Call Now
+								<a href={telMobileHref} className={btnPrimary}>
+									Call Mobile
 								</a>
 								<button
-									onClick={() => copy("phone", phone)}
+									onClick={() => copy("phoneMobile", phoneMobile)}
 									className={btnGhost}
-									aria-label="Copy phone">
-									{copied === "phone" ? <FiCheck /> : <FiCopy />}{" "}
-									{copied === "phone" ? "Copied" : "Copy"}
+									aria-label="Copy mobile number">
+									{copied === "phoneMobile" ? <FiCheck /> : <FiCopy />}{" "}
+									{copied === "phoneMobile" ? "Copied" : "Copy"}
+								</button>
+
+								<a href={telLandlineHref} className={btnPrimary}>
+									Call Landline
+								</a>
+								<button
+									onClick={() => copy("phoneLandline", phoneLandline)}
+									className={btnGhost}
+									aria-label="Copy landline number">
+									{copied === "phoneLandline" ? <FiCheck /> : <FiCopy />}{" "}
+									{copied === "phoneLandline" ? "Copied" : "Copy"}
 								</button>
 							</>
 						}
 					/>
 
-					{/* Website */}
+					{/* Email */}
 					<Card
-						icon={<FiGlobe className="text-orange-400" size={28} />}
-						title="Website"
-						body={<span>{website}</span>}
+						icon={<FiMail className="text-orange-400" size={28} />}
+						title="Email"
+						body={<span className="font-medium">{email}</span>}
 						actions={
 							<>
-								<a
-									href={webHref}
-									target="_blank"
-									rel="noreferrer"
-									className={btnPrimary}>
-									Visit Site
+								<a href={mailHref} className={btnPrimary}>
+									Send Email
 								</a>
 								<button
-									onClick={() => copy("website", webHref)}
+									onClick={() => copy("email", email)}
 									className={btnGhost}
-									aria-label="Copy website">
-									{copied === "website" ? <FiCheck /> : <FiCopy />}{" "}
-									{copied === "website" ? "Copied" : "Copy"}
+									aria-label="Copy email">
+									{copied === "email" ? <FiCheck /> : <FiCopy />}{" "}
+									{copied === "email" ? "Copied" : "Copy"}
 								</button>
 							</>
 						}
@@ -173,11 +203,11 @@ export default function ContactSection() {
 				</div>
 
 				{/* CTA to Email */}
-				<div className="mt-14 rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/10 via-transparent to-white/5 p-6 md:p-8 text-center">
+				<div className="mt-14 rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/10 via-transparent to-white/5 p-6 text-center md:p-8">
 					<p className="text-sm text-zinc-300">
 						Need quotations or technical specs?{" "}
 						<a
-							href="mailto:sales@srilaxmisales.com"
+							href={mailHref}
 							className="font-semibold text-orange-400 underline-offset-4 hover:underline">
 							Send us your requirements
 						</a>

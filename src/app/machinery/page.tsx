@@ -3,7 +3,7 @@ import MachinarySection from "@/components/machinary/MachinarySection";
 
 function page() {
 	return (
-		<div >
+		<div>
 			<MachinarySection />
 		</div>
 	);
