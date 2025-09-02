@@ -17,20 +17,6 @@ const machinary = [
 		description:
 			"Versatile, precision-focused lathe for shaping, cutting, and drilling. Suited for metalworking shops, tool rooms, and industrial manufacturing lines.",
 	},
-	{
-		title: "POWER LOOMING MACHINE",
-		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729989/semi-automatic-power-looms-machine-770_bhd722.jpg",
-		description:
-			"Efficient semi-automatic power loom for high-speed textile weaving. Delivers consistent fabric quality across varied materials at scale.",
-	},
-	{
-		title: "ARC WELDING MACHINE",
-		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749730052/61PIAB7d-JL._SL1350__auht3j.jpg",
-		description:
-			"Durable, high-output arc welder for seamless joints and smooth operation—ideal for construction, fabrication, and repair workflows.",
-	},
 ];
 
 export default function MachinarySection() {

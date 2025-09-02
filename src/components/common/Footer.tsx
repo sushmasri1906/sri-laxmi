@@ -80,7 +80,7 @@ export default function Footer() {
 								</span>
 							</li>
 							<li className="pt-1 text-sm font-medium text-orange-500">
-								GSTIN: 36HDPG8022E1ZR
+								GSTIN: 36AHDPG8022E1ZR
 							</li>
 						</ul>
 					</address>

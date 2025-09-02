@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const images = [
-	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450747/7_e5b8mb.png",
+	// "https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450747/7_e5b8mb.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450750/8_qtljij.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450753/9_tmu3xn.png",
 ];

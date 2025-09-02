@@ -1,16 +1,17 @@
 import React from "react";
 import Carousel from "./Carousel";
 import Solution from "./Solution";
-import Products from "./Products";
 import HomeAbout from "./HomeAbout";
 import Specialities from "./Specialities";
+import Products from "../products/Our-Products";
 
 function Home() {
 	return (
 		<div>
 			<Carousel />
-			<HomeAbout/>
+			<HomeAbout />
 			<Solution />
+
 			<Specialities />
 			<Products />
 		</div>

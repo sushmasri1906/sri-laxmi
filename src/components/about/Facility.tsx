@@ -7,11 +7,9 @@ const facilityImages = [
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450831/53_atieqt.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450836/57_yd0qan.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450833/55_qy41an.png",
-	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450831/51_ulgzhg.png",
-	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450825/45_tuqyrj.png",
-	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450805/15_ng6lcg.png",
-	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450770/15_g9hm43.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450783/20_wt3unh.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450717/3_xfpwdc.png",
+	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450831/51_ulgzhg.png",
 ];
 
 const Facility = () => {

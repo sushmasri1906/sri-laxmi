@@ -13,34 +13,34 @@ const defaultProducts: Product[] = [
 	{
 		title: "CONE CRUSHERS",
 		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729230/th_qpyonz.jpg",
+			"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450807/20_b42enn.png",
 		description:
 			"Efficient crushers for secondary/tertiary stages, built for hard, abrasive feeds.",
 	},
 	{
 		title: "JAW CRUSHERS",
 		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749729320/th_1_vspzad.jpg",
+			"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450805/15_ng6lcg.png",
 		description:
 			"High-throughput primary crushers to break large boulders with consistent sizing.",
 	},
 	{
-		title: "SCREEN'S WIRE MESH",
+		title: "SCREENS WIRE MESH",
 		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749730742/woven-mining-screen-1_ehbaqs.jpg",
+			"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450825/45_tuqyrj.png",
 		description:
 			"Wear-resistant woven mesh for screening & classification in mining and minerals.",
 	},
 	{
-		title: "VSI CRUSHERS",
+		title: "CONVEYORS",
 		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1749731196/th_n3jlvm.jpg",
+			"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450838/61_dzmedq.png",
 		description:
-			"High-speed impactors delivering fine, cubical aggregates for premium mixes.",
+			"Durable conveyor systems ensuring smooth material handling across operations.",
 	},
 ];
 
-export default function ProductsShowcase({
+export default function Products({
 	items = defaultProducts,
 }: {
 	items?: Product[];
