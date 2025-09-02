@@ -57,7 +57,7 @@ export default function AboutHero() {
 				<div className="mx-auto max-w-3xl">
 					{/* Eyebrow/badge */}
 					<div className="flex justify-center">
-						<span className="mt-16 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-300">
+						<span className="mt-28 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-300">
 							Our Story
 						</span>
 					</div>

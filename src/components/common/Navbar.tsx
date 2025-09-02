@@ -43,9 +43,9 @@ const NavBar = () => {
 						<Image
 							src="https://res.cloudinary.com/degrggosz/image/upload/v1749712620/29_zxpmin.png"
 							height={64}
-							width={300}
+							width={160}
 							alt="logo"
-							className="w-[240px] sm:w-[300px] cursor-pointer"
+							className="w-[200px] sm:w-[200px] cursor-pointer"
 						/>
 					</Link>
 				</h1>
