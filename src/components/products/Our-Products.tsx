@@ -32,11 +32,10 @@ const defaultProducts: Product[] = [
 			"Wear-resistant woven mesh for screening & classification in mining and minerals.",
 	},
 	{
-		title: "CONVEYORS",
+		title: "carrying rollers",
 		image:
-			"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450838/61_dzmedq.png",
-		description:
-			"Durable conveyor systems ensuring smooth material handling across operations.",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1764140516/conveyor-carrying-rollers-1000x1000_ugkbqc.jpg",
+		description: "Supports conveyor belt",
 	},
 ];
 

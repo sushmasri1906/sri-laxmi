@@ -54,8 +54,8 @@ export default function HomeAbout() {
 									Comprehensive Product Range
 								</h4>
 								<p className="mt-1 text-sm text-zinc-300">
-									Rollers, pulleys, belts, frames & more - designed for durability
-									and industrial demands.
+									Rollers, pulleys, belts, frames & more - designed for
+									durability and industrial demands.
 								</p>
 							</div>
 
@@ -107,7 +107,7 @@ export default function HomeAbout() {
 					{/* Right image */}
 					<div className="relative h-[420px] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset]">
 						<Image
-							src="https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450838/61_dzmedq.png"
+							src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1764140516/conveyor-carrying-rollers-1000x1000_ugkbqc.jpg"
 							alt="Conveyor Spares"
 							fill
 							priority

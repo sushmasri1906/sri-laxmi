@@ -4,12 +4,10 @@ import Image from "next/image";
 import React from "react";
 
 const images = [
-	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450844/67_jpztmg.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450842/58_ayazcr.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450842/66_sqznxa.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450841/65_kzyymg.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450841/64_kquxl1.png",
-	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450838/61_dzmedq.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450838/62_upedgh.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450837/60_viuhdw.png",
 	"https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450836/56_hw7j6r.png",

@@ -41,11 +41,11 @@ export default function CrusherSpares() {
 
 	// Cone Crusher Spares
 	const coneSpares: Spare[] = [
-		{
-			name: "Backing Compound",
-			desc: "Provides strong crusher backing",
-			img: "https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450785/21_spx2zv.png",
-		},
+		// {
+		// 	name: "Backing Compound",
+		// 	desc: "Provides strong crusher backing",
+		// 	img: "https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450785/21_spx2zv.png",
+		// },
 		{
 			name: "Grease Seals",
 			desc: "Ensures sealing & prevents leakage",
@@ -214,9 +214,14 @@ export default function CrusherSpares() {
 			img: "https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450837/60_viuhdw.png",
 		},
 		{
-			name: "Conveyor Belt",
-			desc: "Reliable belt system",
-			img: "https://res.cloudinary.com/dk0smdu0d/image/upload/v1756450838/61_dzmedq.png",
+			name: "Carrying rollers",
+			desc: "Supports conveyor belt",
+			img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764140516/conveyor-carrying-rollers-1000x1000_ugkbqc.jpg",
+		},
+		{
+			name: "Rerun rollers",
+			desc: "Ensures belt alignment",
+			img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764140476/Return-Rollers_v5vh6s.png",
 		},
 	];
 
